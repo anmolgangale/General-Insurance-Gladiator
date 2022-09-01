@@ -1,0 +1,71 @@
+   
+    <nav class="nav nav-pills flex-column flex-sm-row"style="background-color:gray">
+       
+        <a class="flex-sm-fill text-sm-center nav-link" href="">Home</a>
+        <a class="flex-sm-fill text-sm-center nav-link" href="/contactus">Contact</a>
+        <a class="flex-sm-fill text-sm-center nav-link" href="/aboutUs">About Us</a>
+        <a class="flex-sm-fill text-sm-center nav-link" href="/faq">FAQ</a>
+        <a class="flex-sm-fill text-sm-center nav-link" href="/help">Help</a>
+        <div class="dropdown">
+          <button  mat-raised-button color="accent"class="dropbtn">
+            <mat-icon class="material-icons-two-tone">person</mat-icon>User 
+          </button>
+          <div class="dropdown-content">
+            <mat-list>
+             <a mat-list-item (click)="authentication('viewinsurance')">Insurances</a>
+              
+              <a mat-list-item (click)="authentication('myclaims')">Claims</a>
+              
+              <a mat-list-item (click)="logout()">Logout</a>
+            </mat-list>
+          </div>
+        </div>
+       
+        <button type="button" class=" btn btn-info "><a (click)="reglog('login')">Login / </a> <a (click)="reglog('register')">Register</a></button>
+        
+    </nav>
+
+
+  <!-- <mat-toolbar color="primary" class="navbar">
+   
+    <a [routerLink]="['background']"> <img src="../../../assets/images/Logo.png"  ></a>
+    
+    <a  [routerLink]="['login']">Buy </a>
+    <a  [routerLink]="['login']">Renew </a>
+    <a  [routerLink]="['calculate']">Calculate </a>
+    <a  [routerLink]="['login']">Claim </a>
+   
+  
+
+    <div class="dropdown">
+      <button  mat-raised-button color="accent"class="dropbtn">
+        <mat-icon class="material-icons-two-tone">
+        person
+        </mat-icon>User </button>
+      <div class="dropdown-content">
+        <mat-list>
+         <a mat-list-item  [routerLink]="['Contact-us']">Contact</a>
+          <mat-divider></mat-divider>
+          <a mat-list-item  [routerLink]="['help']">Help</a>
+          <mat-divider></mat-divider>
+          <a mat-list-item  [routerLink]="['Faq']">FAQ</a>
+          <mat-divider></mat-divider>
+          <a mat-list-item  [routerLink]="['About-us']">About US</a>
+          <mat-divider></mat-divider>
+          <a mat-list-item  [routerLink]="['register']">Register</a>
+          <mat-divider></mat-divider>
+          <a mat-list-item  [routerLink]="['login']">User Login</a>
+          <mat-divider></mat-divider>
+          <a mat-list-item  [routerLink]="['admin-login']">Admin Login </a>
+          <mat-divider></mat-divider>
+          <a mat-list-item  >Logout </a>
+          <mat-divider></mat-divider>
+        </mat-list>
+      </div>
+    </div> 
+    
+     
+         
+  
+  </mat-toolbar>-->
+  

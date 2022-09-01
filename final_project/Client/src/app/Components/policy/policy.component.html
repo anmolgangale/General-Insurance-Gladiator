@@ -1,0 +1,62 @@
+<div>
+  <div class="container">
+   <form [formGroup]="PolicyForm" >
+   <div class="row d-flex justify-content-center mt-5 mb-5">
+       
+       <div class="col-md-6">
+           
+           <div class="card p-4">
+               
+               <div class="text-left">
+                   <h5>Fill The Policy Form!!</h5>
+                   
+               </div>
+
+               <!-- <label for="policyType" class="form-control"><b>Policy Type: </b> </label><br> -->
+               <div class="mt-2">
+                <label>Plan Type:</label>
+                 
+                 <select class="form-select" aria-label="Default select example" formControlName="planType">
+                   
+                   <option value="Comprehensive">Comprehensive</option>
+                   <option value="Third Party">Third Party</option>
+                  <!-- <option value="One Time">One Time (Travel)</option>-->
+
+                 </select>
+                 <span style="color:red" *ngIf="planType && planType.invalid && (planType.dirty || planType.touched)">*Field is required</span>
+               </div>
+               
+               
+               <div class="mt-2">
+                   <div class="form-group">
+                       <label>Policy Term: </label>
+                       <input type="number" class="form-control" id="planTerm" formControlName="planTerm">
+                       <span style="color:red" *ngIf="planTerm && planTerm.invalid && (planTerm.dirty || planTerm.touched)">*Plan Term should be 1 to 4</span>
+                   </div>
+               </div>
+               <div class="mt-3">
+                <button (click)="calculatePremium()" class="btn btn-primary">Calculate Premium</button>
+                </div>
+               <div class="mt-2">
+                   <div class="form-group">
+                       <label>Premium</label>
+                       <input value="{{premium}}" type="number" class="form-control" id="premium" formControlName="premium">
+                       <!-- <span style="color:red" *ngIf="premium1 && premium1.invalid && (premium1.dirty || premium1.touched)">*Click on Calculate</span> -->
+                   </div>
+               </div> 
+               <!-- Submit button -->
+               <div class="mt-3">
+                   <button [disabled]="!PolicyForm.valid" (click)="onSubmit(PolicyForm.value)"  type="submit" class="btn btn-primary">Submit</button>
+               </div>
+               
+           </div>
+           
+       </div>
+       
+   </div>
+</form>
+</div>
+
+
+</div>
+
